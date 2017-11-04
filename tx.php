@@ -28,16 +28,9 @@ $info = "TX ID: $txid \n Sent Value: $sentvalue \n Fee: $fee \n Block Number: $b
             if (in_array($message['chat']['id'], $admins)) {
                 
               
-            } else {
-                apiRequest("sendMessage", array('chat_id' => $chat_id, "reply_to_message_id" => $message_id, "text" => 'You have no access to sending messages to channel'));
-            }
-        } else {
-            apiRequest("sendMessage", array('chat_id' => $chat_id, "parse_mode" => "HTML", "text" =>  'Sorry, The command you sent is not valid for me.'));
-        }
-    } else {
-        apiRequest("sendMessage", array('chat_id' => $chat_id, "reply_to_message_id" => $message_id, "text" => 'Hello! Thanks fo adding me to your group! Send /commands to see list of commands.'));
-    }
-
+            } 
+        } 
+    } 
 }
 
 ?>
